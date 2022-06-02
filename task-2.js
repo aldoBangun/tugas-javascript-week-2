@@ -31,13 +31,18 @@ const printNames = (names, maxLength) => {
 }
 
 const findNames = ({ names, keyword, maxOutput, callback }) => {
+   const message = `Cannot find any names that contains '${keyword}'`
    const filteredNames = names.filter(name => {
       return name.toLowerCase().includes(keyword.toLowerCase())
    })
 
+   if(!filteredNames.length) {
+      return message
+   }
+
    return callback(filteredNames, maxOutput)
 }
 
-const config = { names, keyword: 'am', maxOutput: 2, callback: printNames }
+const config = { names, keyword: 'el', maxOutput: 3, callback: printNames }
 
 // console.log(findNames(config))
