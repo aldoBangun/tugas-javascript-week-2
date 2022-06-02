@@ -28,4 +28,4 @@ const findNames = ({ names, keyword, maxOutput, callback }) => {
 
 const config = { names, keyword: 'el', maxOutput: 3, callback: printNames }
 
-// console.log(findNames(config))
+findNames(config)
