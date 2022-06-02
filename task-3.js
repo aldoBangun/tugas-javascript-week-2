@@ -19,8 +19,6 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
    } else {
       console.log("Nilai tidak ditemukan")
    }
-
 }
-
 
 seleksiNilai(4, 10, [3,2,11,12,45])
