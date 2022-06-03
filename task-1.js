@@ -94,7 +94,7 @@ l('Hello World')
 
 /*
 10. Array Every
-    Array Every merupakan sebuah method yang berfungsi untuk apakah semua elemen pada sebuah array memiliki kesamaan berdasarkan kondisi yang ditentukan. Method ini mengembalikan nilai true jika semua elemen memenuhi kondisi yang ditentukan, dan false jika tidak.
+    Array Every merupakan sebuah method yang berfungsi untuk mencari tahu apakah semua elemen pada sebuah array memiliki kesamaan, berdasarkan suatu kondisi yang ditentukan. Method ini mengembalikan nilai true jika semua elemen memenuhi kondisi yang ditentukan, dan false jika tidak.
 */
 
 const friends = [
