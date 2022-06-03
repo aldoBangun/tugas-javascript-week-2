@@ -32,7 +32,7 @@ people.pop()
 
 /*
 4. Array Includes
-   Method includes digunakan untuk menentukan apakah sebuah array mengantuk element tertentu dan mengembalikan nilai true jika mengandung sebuah nilai yang ditentukan, dan false jika tidak.
+   Method includes digunakan untuk menentukan apakah sebuah array mengandung elemen tertentu dan mengembalikan nilai true jika mengandung sebuah nilai yang ditentukan, dan false jika tidak.
 */
 
 const colors = ['blue', 'red', 'yellow', 'green', 'black', 'white']
