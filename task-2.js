@@ -13,6 +13,18 @@ const printNames = (names, maxLength) => {
    return names
 }
 
+const inputValidation = (data, keyword) => {
+   if(!Array.isArray(data) || !keyword.trim()) {
+      return false
+   }
+
+   if(!data.length) {
+      return false
+   }
+
+   return true
+}
+
 const findNames = ({ names, keyword, maxOutput, callback }) => {
    const filteredNames = names.filter(name => {
       return name.toLowerCase().includes(keyword.toLowerCase())
@@ -25,6 +37,20 @@ const findNames = ({ names, keyword, maxOutput, callback }) => {
    return callback(filteredNames, maxOutput)
 }
 
+
+const nameFinder = config => {
+   const { names, keyword } = config
+   const isValidInput = inputValidation(names, keyword);
+
+   if(!isValidInput) {
+      console.log('Invalid input, please check your input and try again!');
+      return
+   }
+
+   return findNames(config)
+}
+
+
 const config = { names, keyword: 'el', maxOutput: 3, callback: printNames }
 
-findNames(config)
+nameFinder(config)
