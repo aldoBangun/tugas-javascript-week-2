@@ -138,5 +138,3 @@ const printFriendsGender = friends => {
 const invalidInputExample = null
 
 printFriendsGender(invalidInputExample)
-
-// Do not Push the update (or commit) this is just an example
