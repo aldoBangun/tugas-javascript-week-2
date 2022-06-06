@@ -104,9 +104,39 @@ const friends = [
    { id: 4, name: 'Michael Kevin', gender: 'male'}
 ]
 
+
 const checkFriendsGender = friends => {
    const result = friends.every(friend => friend.gender == 'male')
    return result ? 'All Friends are male' : 'Not All Friends are male'
 }
 
-console.log(checkFriendsGender(friends))
+
+const inputValidation = data => {
+   if(!Array.isArray(data)) {
+      return false
+   }
+
+   if(!data.length) {
+      return false
+   }
+
+   return true
+}
+
+
+const printFriendsGender = friends => {
+   const isValidFriends = inputValidation(friends)
+
+   if(!isValidFriends) {
+      return console.log('Invalid input')
+   }
+
+   const result = checkFriendsGender(friends)
+   console.log(result)
+}
+
+const invalidInputExample = null
+
+printFriendsGender(invalidInputExample)
+
+// Do not Push the update (or commit) this is just an example
