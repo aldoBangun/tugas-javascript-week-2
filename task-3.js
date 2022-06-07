@@ -2,7 +2,6 @@ const validasiInput = ({ nilaiAwal, nilaiAkhir, dataArray }) => {
    const error = { error: true }
    const validasiNilai = typeof nilaiAwal !== 'number' || typeof nilaiAkhir !== 'number'
    
-   
    if(validasiNilai) {
       error.pesan = 'Nilai awal dan nilai akhir harus bertipe data "number"'
       return error
@@ -37,6 +36,7 @@ const validasiInput = ({ nilaiAwal, nilaiAkhir, dataArray }) => {
    return { error: false }
 }
 
+
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
    const adaError = validasiInput({ nilaiAwal, nilaiAkhir, dataArray })
 
@@ -56,6 +56,7 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
       console.log("Nilai tidak ditemukan")
    }
 }
+
 
 seleksiNilai(4, 10, [3,2,11,12,45]) // Nilai tidak ditemukan
 seleksiNilai('4', 10, [1,2,3,4,5]) // Nilai awal dan nilai akhir harus bertipe data "number"
