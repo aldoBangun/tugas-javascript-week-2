@@ -1,4 +1,8 @@
 const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
+   if (typeof nilaiAwal !== 'number') return console.log("nilai awal harus berupa angka")
+   if (typeof nilaiAkhir !== 'number') return console.log("nilai akhir harus berupa angka")
+   if (!Array.isArray(dataArray)) return console.log("data array harus berupa array")
+
    if(nilaiAwal >= nilaiAkhir) {
       console.log("Nilai akhir harus lebih besar dari nilai awal")
       return 
